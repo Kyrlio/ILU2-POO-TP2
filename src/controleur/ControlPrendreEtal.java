@@ -21,6 +21,7 @@ public class ControlPrendreEtal {
 		int numeroEtal = -1;
 		Gaulois gaulois = village.trouverHabitant(nomVendeur);
 		numeroEtal = village.installerVendeur(gaulois, produit, nbProduit);
+		System.out.println(nomVendeur + " va s'installer a l'étal " + numeroEtal);
 		return numeroEtal+1;
 	}
 

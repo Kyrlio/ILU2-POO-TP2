@@ -14,7 +14,6 @@ public class BoundaryPrendreEtal {
 	}
 
 	public void prendreEtal(String nomVendeur) {
-		//TODO a completer
 		boolean nomVendeurConnu = controlPrendreEtal.verifierIdentite(nomVendeur);
 		if (!nomVendeurConnu) {
 			System.out.println("Je suis désolée " + nomVendeur + " mais il faut être un habitant de notre village pour commercer ici.");
@@ -30,7 +29,6 @@ public class BoundaryPrendreEtal {
 	}
 
 	private void installerVendeur(String nomVendeur) {
-		//TODO a completer
 		System.out.println("C'est parfait, il me reste un étal pour vous !");
 		System.out.println("Il me faudrait quelques renseignements : ");
 		StringBuilder question = new StringBuilder();

@@ -84,49 +84,49 @@ public class TestControleursDesCas {
 
 		// Cas 6 : libererEtal
 
-//		System.out.println("///////////////////////////////");
-//		System.out.println("Cas 6 : Liberer etal");
-//		ControlLibererEtal controlLibererEtal = new ControlLibererEtal(
-//				controlTrouverEtalVendeur);
-//		String[] ventesObelix = controlLibererEtal.libererEtal("Obelix");
-//		System.out.println("Les ventes d'Obelix : ");
-//		System.out.println("[0] : un boolean indiquant si l'étal est occupé ");
-//		System.out.println("[1] : nom du vendeur");
-//		System.out.println("[2] : produit vendu");
-//		System.out.println(
-//				"[3] : quantité de produit à vendre au début du marché");
-//		System.out.println("[4] : quantité de produit vendu");
-//		for (String string : ventesObelix) {
-//			System.out.println(string);
-//		}
-//		String[] ventesIntrus = controlLibererEtal.libererEtal("Intrus");
-//		System.out.println("Les ventes d'Intrus : " + ventesIntrus);
+		System.out.println("///////////////////////////////");
+		System.out.println("Cas 6 : Liberer etal");
+		ControlLibererEtal controlLibererEtal = new ControlLibererEtal(
+				controlTrouverEtalVendeur);
+		String[] ventesObelix = controlLibererEtal.libererEtal("Obelix");
+		System.out.println("Les ventes d'Obelix : ");
+		System.out.println("[0] : un boolean indiquant si l'étal est occupé ");
+		System.out.println("[1] : nom du vendeur");
+		System.out.println("[2] : produit vendu");
+		System.out.println(
+				"[3] : quantité de produit à vendre au début du marché");
+		System.out.println("[4] : quantité de produit vendu");
+		for (String string : ventesObelix) {
+			System.out.println(string);
+		}
+		String[] ventesIntrus = controlLibererEtal.libererEtal("Intrus");
+		System.out.println("Les ventes d'Intrus : " + ventesIntrus);
+		village.partirVendeur(obelix);
 
 		// Cas 7 : Afficher marche
 
-//		System.out.println("///////////////////////////////");
-//		System.out.println("Cas 7 : Afficher Marche");
-//		ControlAfficherMarche controlAfficherMarche = new ControlAfficherMarche(
-//				village);
-//		controlPrendreEtal.prendreEtal("Obelix", "menhirs", 3);
-//		controlPrendreEtal.prendreEtal("Asterix", "poissons", 10);
-//		String[] marche = controlAfficherMarche.donnerInfosMarche();
-//		for (String etal : marche) {
-//			System.out.println(etal);
-//		}
+		System.out.println("///////////////////////////////");
+		System.out.println("Cas 7 : Afficher Marche");
+		ControlAfficherMarche controlAfficherMarche = new ControlAfficherMarche(
+				village);
+		controlPrendreEtal.prendreEtal("Obelix", "menhirs", 3);
+		controlPrendreEtal.prendreEtal("Asterix", "poissons", 10);
+		String[] marche = controlAfficherMarche.donnerInfosMarche();
+		for (String etal : marche) {
+			System.out.println(etal);
+		}
 
 		// Cas 8 : Acheter produit
 
-//		System.out.println("///////////////////////////////");
-//		System.out.println("Cas 8 : Acheter Produit");
-//		ControlAcheterProduit controlAcheterProduit = new ControlAcheterProduit(
-//				controlVerifierIdentite, controlTrouverEtalVendeur, village);
-//		System.out.println("Obelix a 3 menhir sur son etal");
-//		int nbProduitAcheter = controlAcheterProduit.acheterProduit("Obelix",
-//				2);
-//		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur 2");
-//		nbProduitAcheter = controlAcheterProduit.acheterProduit("Obelix", 3);
-//		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur 3");
+		System.out.println("///////////////////////////////");
+		System.out.println("Cas 8 : Acheter Produit");
+		ControlAcheterProduit controlAcheterProduit = new ControlAcheterProduit(
+				controlVerifierIdentite, controlTrouverEtalVendeur, village);
+		System.out.println("Obelix a 3 menhir sur son etal");
+		int nbProduitAcheter = controlAcheterProduit.acheterProduit("Test", "Obelix",2);
+		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur 2");
+		nbProduitAcheter = controlAcheterProduit.acheterProduit("oui","Obelix", 3);
+		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur 3");
 
 	}
 
