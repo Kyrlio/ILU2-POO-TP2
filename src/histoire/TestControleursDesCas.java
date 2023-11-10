@@ -122,12 +122,16 @@ public class TestControleursDesCas {
 		System.out.println("Cas 8 : Acheter Produit");
 		ControlAcheterProduit controlAcheterProduit = new ControlAcheterProduit(
 				controlVerifierIdentite, controlTrouverEtalVendeur, village);
-		System.out.println("Obelix a 3 menhir sur son etal");
-		int nbProduitAcheter = controlAcheterProduit.acheterProduit("Test", "Obelix",2);
-		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur 2");
-		nbProduitAcheter = controlAcheterProduit.acheterProduit("oui","Obelix", 3);
-		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur 3");
+		System.out.println("Obelix a " + etalObelix.getQuantite() + " menhir sur son etal");
+		int nbProduitAcheter = controlAcheterProduit.acheterProduit("Obelix",2);
+		System.out.println("Un acheteur achète 2 produits à Obelix\n");
+		
+		System.out.println("Obelix a " + etalObelix.getQuantite() + " menhir sur son etal");
+		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur " + etalObelix.getQuantite());
+		
+		System.out.println("Obelix a " + etalObelix.getQuantite() + " menhir sur son etal");
+		nbProduitAcheter = controlAcheterProduit.acheterProduit("Obelix", 3);
+		System.out.println("Achat de " + nbProduitAcheter + " menhirs sur " + etalObelix.getQuantite());
 
 	}
-
 }

@@ -47,5 +47,14 @@ class ControlPrendreEtalTest {
 		village.ajouterHabitant(bonemine);
 		assertTrue(controlPrendreEtal.prendreEtal("Bonemine", "fleurs", 10) > 0);
 	}
+	
+	@Test
+	void testVerifierIdentite() {
+		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(controlVerifierIdentite, village);
+		Gaulois bonemine = new Gaulois("Bonemine", 10);
+		village.ajouterHabitant(bonemine);
+		assertTrue(controlPrendreEtal.verifierIdentite("Bonemine"));
+		assertFalse(controlPrendreEtal.verifierIdentite("Obelix"));
+	}
 
 }

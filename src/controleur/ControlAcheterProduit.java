@@ -18,20 +18,9 @@ public class ControlAcheterProduit {
 		this.controlTrouverEtalVendeur = controlTrouverEtalVendeur;
 	}
 	
-	public int acheterProduit(String nomAcheteur,String nomVendeur, int quantite) {
+	public int acheterProduit(String nomVendeur, int quantite) {
 		Etal etal = trouverEtalVendeur(nomVendeur);
-		
-		if(etal.getQuantite()==0) {
-			System.out.println(nomAcheteur + " veut acheter " + quantite + " " + etal.getProduit() + ", malheuresement il n'y en a plus ! \n");
-		} else if (quantite>etal.getQuantite()){
-			System.out.println(nomAcheteur + " veut acheter " + quantite + ", malheureusement " + nomVendeur + " n'en a plus que " + etal.getQuantite() + ". " + nomAcheteur + " achète tout le stock de " + nomVendeur + "\n");
-			etal.acheterProduit(etal.getQuantite());
-		} else {
-			etal.acheterProduit(quantite);
-			System.out.println(nomAcheteur + " achète " + quantite + " " + etal.getProduit() + " a " + nomVendeur);
-		}
-		
-		return quantite;
+		return etal.acheterProduit(quantite);
 		
 	}
 	
@@ -45,6 +34,10 @@ public class ControlAcheterProduit {
     
     public String[] donnerInfosMarche() {
         return village.donnerEtatMarche();
+    }
+    
+    public boolean verifierIdentite(String nom) {
+    	return controlVerifierIdentite.verifierIdentite(nom);
     }
 	
 	
